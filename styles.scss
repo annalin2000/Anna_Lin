@@ -1,0 +1,76 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include desktop {
+    display: block;
+    overflow: visible;
+  }
+
+  &__container {
+    @include flex;
+    width: 100%;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__logo {
+    font-weight: 600;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+
+    display: none;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+  }
+
+  &__contact {
+    display: none;
+    white-space: nowrap;
+    flex-shrink: 0; // 🔑 prevents truncation
+
+    @include desktop {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.button--outline {
+  border: 1px solid currentColor;
+}
