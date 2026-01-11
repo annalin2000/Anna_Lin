@@ -1,0 +1,51 @@
+@use "./variables";
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin nav-style {
+  text-decoration: none;
+  color: black;
+}
+
+@mixin grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@mixin phone {
+  @media only screen and (max-width: (variables.$sm - 1)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: (variables.$sm)) and (max-width: variables.$md) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media only screen and (min-width: variables.$sm) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media only screen and (min-width: (variables.$md + 1)) and (max-width: variables.$lg) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: (variables.$lg + 1)) and (max-width: variables.$xl) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media only screen and (min-width: (variables.$xl + 1)) {
+    @content;
+  }
+}
