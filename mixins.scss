@@ -38,8 +38,19 @@
   }
 }
 
+@mixin tablet-landscape-up {
+  @media only screen and (min-width: (variables.$md + 1)) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media only screen and (min-width: (variables.$lg + 1)) and (max-width: variables.$xl) {
+    @content;
+  }
+}
+@mixin laptop-up {
+  @media only screen and (min-width: (variables.$lg + 1)) {
     @content;
   }
 }

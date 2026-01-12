@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anna Lin Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -33,26 +37,18 @@
     </header>
 
     <main>
-      <section class="intro">
+      <section id="home" class="intro">
         <div class="intro__container">
           <div class="intro__text">
             <p class="intro__text--introduction">👋 Hey! I’m Anna Lin</p>
             <h1 class="intro__text--heading">
-              A Junior Software Developer based in the UK.
+              A Junior Software Developer based in the UK
             </h1>
           </div>
-
-          <figure class="intro__image-wrapper">
-            <img
-              class="intro__image"
-              src="./images/developer.png"
-              alt="Developer working on a laptop"
-            />
-          </figure>
         </div>
       </section>
 
-      <section class="about">
+      <section id="about" class="about">
         <div class="about__container">
           <figure class="about__image-wrapper">
             <img
@@ -64,13 +60,13 @@
 
           <h2 class="about__heading">About Me</h2>
           <div class="about__text">
-            <p class="about__para">
+            <p class="about__para about__para--one">
               Former pharmacist transitioning into full stack software
               engineering, bringing strong analytical skills and a proven
               ability to solve complex problems.
             </p>
 
-            <p class="about__para">
+            <p class="about__para about__para--two">
               Experienced in HTML, CSS, JavaScript, React, Python and cloud
               technologies, with hands on practice in agile development and
               collaborative teamwork. Strong communicator, adaptable, and eager
@@ -82,9 +78,7 @@
 
       <section class="skills">
         <div class="skills__container">
-          <h2 class="skills__heading">
-            Technical Skills
-          </h2>
+          <h2 class="skills__heading">Technical Skills</h2>
 
           <p class="skills__description">
             Here are the technologies I am proficient in:
@@ -131,92 +125,135 @@
         </div>
       </section>
 
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="projects__container">
-          <h2 class="section-heading section-heading--center">My Projects</h2>
+          <h2 class="projects_heading">My Projects</h2>
 
           <div class="projects__list">
             <article class="project-card">
               <img
                 class="project-card__image"
-                src=""
-                alt="Screenshot of a client project"
+                src="./images/greenleaf.png"
+                alt="screenshor of Greenleaf webpage"
               />
 
-              <p class="project-card__tech">REACT</p>
-              <h3 class="project-card__title">Client Project</h3>
+              <p class="project-card__tech">JavaScript</p>
+              <h3 class="project-card__title">Web Development Project</h3>
 
               <p class="project-card__summary">
-                Maecenas accumsan tincidunt sit et in ut diam sit. Metus, nec
-                augue urna gravida nisl, tortor sapien nec sollicitudin.
+                A modern, responsive, and accessible multi-page website for
+                GreenLeaf Pharmacy, a community based pharmacy providing
+                prescriptions, vaccinations, and health services. This site is
+                designed for clarity, accessibility, and ease of navigation on
+                all devices..
               </p>
 
               <div class="project-card__links">
-                <a class="button button--outline" href="#">Code ↗</a>
-                <a class="button button--outline" href="#">Preview ↗</a>
+                <a
+                  class="button button--outline"
+                  href="https://github.com/annalin2000/GreenLeaf.git"
+                  >Code</a
+                >
+                <a
+                  class="button button--outline"
+                  href="https://annalin2000.github.io/GreenLeaf/"
+                  >Preview</a
+                >
               </div>
             </article>
 
             <article class="project-card">
               <img
                 class="project-card__image"
-                src=""
-                alt="Screenshot of a client project"
+                src="./images/todo.png"
+                alt="Screenshot of todo app"
               />
 
-              <p class="project-card__tech">REACT</p>
-              <h3 class="project-card__title">Client Project</h3>
+              <p class="project-card__tech">To Do App</p>
+              <h3 class="project-card__title">JavaScript Project</h3>
 
               <p class="project-card__summary">
-                Maecenas accumsan tincidunt sit et in ut diam sit. Metus, nec
-                augue urna gravida nisl, tortor sapien nec sollicitudin.
+                A simple, elegant, and fully responsive Todo App built with
+                HTML, CSS, and JavaScript. This app helps users organize daily
+                tasks with a modern UI and smooth user experience, featuring
+                task creation, editing, deletion, and progress tracking.
               </p>
 
               <div class="project-card__links">
-                <a class="button button--outline" href="#">Code ↗</a>
-                <a class="button button--outline" href="#">Preview ↗</a>
+                <a
+                  class="button button--outline"
+                  href="https://github.com/annalin2000/ToDoApp.git"
+                  >Code</a
+                >
+                <a
+                  class="button button--outline"
+                  href="https://annalin2000.github.io/ToDoApp/"
+                  >Preview</a
+                >
               </div>
             </article>
 
             <article class="project-card">
               <img
                 class="project-card__image"
-                src=""
-                alt="Screenshot of a client project"
+                src="./images/geocast.png"
+                alt="Screenshot of a group project"
               />
 
-              <p class="project-card__tech">REACT</p>
-              <h3 class="project-card__title">Client Project</h3>
+              <p class="project-card__tech">JavaScript</p>
+              <h3 class="project-card__title">Group Project</h3>
 
               <p class="project-card__summary">
-                Maecenas accumsan tincidunt sit et in ut diam sit. Metus, nec
-                augue urna gravida nisl, tortor sapien nec sollicitudin.
+                Geocast is a single-page web application designed to be a quick
+                reference tool for country facts and current climate conditions.
+                Users can input a country name and receive key demographic data,
+                along with the live weather information for its capital city.
               </p>
 
               <div class="project-card__links">
-                <a class="button button--outline" href="#">Code ↗</a>
-                <a class="button button--outline" href="#">Preview ↗</a>
+                <a
+                  class="button button--outline"
+                  href="https://github.com/alexraju01/geo-cast.git"
+                  >Code</a
+                >
+                <a
+                  class="button button--outline"
+                  href="https://alexraju01.github.io/geo-cast/"
+                  >Preview</a
+                >
               </div>
             </article>
 
             <article class="project-card">
               <img
                 class="project-card__image"
-                src=""
+                src="./images/dashstar.png"
                 alt="Screenshot of a client project"
               />
 
               <p class="project-card__tech">REACT</p>
-              <h3 class="project-card__title">Client Project</h3>
+              <h3 class="project-card__title">Group Project</h3>
 
               <p class="project-card__summary">
-                Maecenas accumsan tincidunt sit et in ut diam sit. Metus, nec
-                augue urna gravida nisl, tortor sapien nec sollicitudin.
+                Dashstar is a gamified workplace platform designed to improve
+                employee motivation and engagement. Employees complete routine
+                tasks, earn experience points (XP) based on task difficulty, and
+                level up as they progress. By adding game-style rewards to
+                everyday work, Dashstar encourages participation and makes
+                routine tasks more engaging.
               </p>
 
               <div class="project-card__links">
-                <a class="button button--outline" href="#">Code ↗</a>
-                <a class="button button--outline" href="#">Preview ↗</a>
+                <a
+                  class="button button--outline"
+                  href="https://github.com/Tiny-B/dashstar.git"
+                  >Code</a
+                >
+                <a
+                  class="button button--outline"
+                  href="https://dashstar.onrender.com"
+                  >Preview</a
+                >
               </div>
             </article>
           </div>
@@ -230,24 +267,23 @@
 
         <ul class="footer__socials">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="https://github.com/annalin2000">
-              <img class="footer__icon" src="./images/github.png" alt="GitHub" />
+            <a
+              class="footer__social-link"
+              href="https://github.com/annalin2000"
+            >
+              <i class="bi bi-github footer__bi"></i>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="https:www.linkedin.com/in/anna-lin-4b1262212">
-                <img class="footer__icon" src="./images/linkedin.png" alt="Linked_in" />
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="./Anna Lin.pdf">
-                <img class="footer__icon" src="./images/cv.png" alt="CV" />
-
+            <a
+              class="footer__social-link"
+              href="https://www.linkedin.com/in/anna-lin-4b1262212"
+            >
+              <i class="bi bi-linkedin footer__bi"></i>
             </a>
           </li>
         </ul>
       </div>
-    </footer> 
-    </main>
+    </footer>
   </body>
 </html>
