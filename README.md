@@ -16,4 +16,4 @@ Built with HTML, SCSS, and a focus on accessibility, responsiveness, and clean d
 
 ## 🔗 Live Demo
 
-You can see the site live at: https://annalin2000.github.io/AnnaPortfolio/
+You can see the site live at: https://annalin2000.github.io/Anna_Lin/
