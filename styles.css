@@ -310,6 +310,11 @@
   width: 34px;
   height: 34px;
   display: block;
+  background: white;
+}
+.skills__icon--CSS3 {
+  width: 52px;
+  height: 35px;
 }
 .skills__label {
   font-size: 0.8rem;
