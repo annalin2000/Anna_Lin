@@ -370,7 +370,6 @@
 }
 .project-card__image {
   width: 90%;
-  height: 280px;
   object-fit: fit;
   margin-bottom: 1rem;
   display: flex;
@@ -507,6 +506,7 @@
   margin: 0;
   font-size: 0.9rem;
   color: #ffffff;
+  text-decoration: none;
 }
 .footer__social-item {
   width: 36px;
