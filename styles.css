@@ -76,20 +76,39 @@
 
 .button {
   padding: 0.6rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
+  border-radius: 0.6rem;
+  font-weight: 650;
   line-height: 1;
   margin-top: 0.3rem;
   text-decoration: none;
-  border: 1px solid black;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  border: 1px solid #2b2a42;
+  color: #2b2a42;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 .button:active {
-  transform: translateY(1px);
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(222, 244, 242, 0.9), 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 .button--outline {
   background: #def4f2;
-  border: 1px solid black;
+}
+.button--outline:hover {
+  background: #c9efec;
 }
 
 .intro__container {
@@ -307,18 +326,18 @@
   gap: 0.5rem;
 }
 .skills__icon {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 40px;
   display: block;
   background: white;
 }
-.skills__icon--CSS3 {
-  width: 52px;
-  height: 35px;
+.skills__icon--HTML5 {
+  width: 50px;
+  height: 43px;
 }
-.skills__label {
-  font-size: 0.8rem;
-  color: #7f8996;
+.skills__icon--CSS3 {
+  width: 67px;
+  height: 45px;
 }
 
 .projects {
@@ -377,9 +396,9 @@
   width: 90%;
   object-fit: fit;
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 220ms ease;
+  will-change: transform;
+  display: block;
 }
 @media only screen and (min-width: 576px) and (max-width: 780px) {
   .project-card__image {
@@ -438,47 +457,118 @@
   padding-right: 55px;
 }
 
-.project-button-one {
-  padding: 0.6rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
+.project-card__image:hover,
+.project-card__image:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+
+.project-card__image:hover img,
+.project-card__image:focus-within img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card__image,
+  .project-card__image img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+.project-button-one,
+.project-button-two {
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.65rem;
+  font-weight: 650;
   line-height: 1;
-  margin-top: 0.3rem;
   text-decoration: none;
-  border: 1px solid black;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  color: #000;
+  border: 1px solid #2b2a42;
+  color: #2b2a42;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.project-button-one:active {
-  transform: translateY(1px);
+.project-button-one:hover,
+.project-button-two:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
-.project-button-one--design {
-  background: #def4f2;
-  border: 1px solid black;
+.project-button-one:active,
+.project-button-two:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+.project-button-one:focus-visible,
+.project-button-two:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(222, 244, 242, 0.95), 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.project-button-one::after,
+.project-button-two::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 50%;
+  height: 220%;
+  transform: rotate(20deg);
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 0;
+  transition: left 0.35s ease, opacity 0.2s ease;
+  pointer-events: none;
+}
+.project-button-one:hover::after,
+.project-button-two:hover::after {
+  left: 130%;
+  opacity: 1;
+}
+
+.project-button-one {
+  margin-top: 0.3rem;
 }
 
 .project-button-two {
-  padding: 0.6rem 1.25rem 0.6rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  line-height: 1;
   margin-top: 1.4rem;
   margin-bottom: 1.1rem;
-  padding-bottom: 0.7rem;
-  text-decoration: none;
-  border: 1px solid black;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  color: #000;
-}
-.project-button-two:active {
-  transform: translateY(1px);
-}
-.project-button-two--design {
-  background: #def4f2;
-  border: 1px solid black;
-  text-align: center;
 }
 
+.project-button-one--design,
+.project-button-two--design {
+  background: #def4f2;
+}
+.project-button-one--design:hover,
+.project-button-two--design:hover {
+  background: #c9efec;
+  border-color: #2b2a42;
+}
+
+.project-button-one .bi,
+.project-button-two .bi {
+  transition: transform 0.15s ease;
+}
+
+.project-button-one:hover .bi,
+.project-button-two:hover .bi {
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-button-one,
+  .project-button-two {
+    transition: none !important;
+  }
+  .project-button-one::after,
+  .project-button-two::after {
+    display: none !important;
+  }
+}
 .bi.bi-code-slash {
   font-size: 1rem;
   line-height: 1;
